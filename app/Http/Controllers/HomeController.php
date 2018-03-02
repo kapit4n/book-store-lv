@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \App\Book;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+        $books = \App\Book::all();
+
+        foreach ($books as $book) {
+            echo $book->name;
+        }
         return view('home');
     }
 }
