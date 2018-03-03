@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Book list</div>
+                <div class="card-header"><a class="nav-link" href="{{ route('book.create') }}">Add</a></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -19,7 +19,8 @@
 						  <div class="card-body">
 						    <h5 class="card-title">{{ $book->name }}</h5>
 						    <p class="card-text">{{ $book->description }},...</p>
-						    <a class="nav-link" href="{{ route('book.show', ['book' => 1]) }}">Show</a>
+                            <a class="nav-link" href="{{ route('book.show', ['book' => $book->id]) }}" style="display: inline-block;"><span class="glyphicon glyphicon-eye-open" aria-hidden="true">Show</span></a>
+						    <a class="nav-link" href="{{ route('book.destroy', ['book' => $book->id]) }}" style="display: inline-block;"><span class="glyphicon glyphicon-remove" aria-hidden="true">X</span></a>
 						  </div>
 						</div>
 					@endforeach
