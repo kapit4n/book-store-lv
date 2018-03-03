@@ -18,7 +18,7 @@
 					  <div class="card-body">
 					    <h5 class="card-title">{{ $book->name }}</h5>
 					    <p class="card-text">{{ $book->description }} </p>
-					    <a href="#" class="btn btn-primary">Edit</a>
+					    <a class="nav-link" href="{{ route('book.update', ['book' => $book->id]) }}" style="display: inline-block;"><span class="glyphicon glyphicon-remove" aria-hidden="true">Edit</span></a>
 					  </div>
 					</div>
                     You are logged in!

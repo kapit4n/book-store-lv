@@ -74,7 +74,7 @@ class BookController extends Controller
      */
     public function edit($id)
     {
-        //
+        return "Edit page";
     }
 
     /**
