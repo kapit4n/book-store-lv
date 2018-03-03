@@ -97,6 +97,7 @@ class BookController extends Controller
      */
     public function destroy($id)
     {
-        //
+        \App\Flight::destroy($id);
+        return redirect('/book');
     }
 }
