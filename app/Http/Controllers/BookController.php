@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-//use App\Book;
+use App\Book;
 
 class BookController extends Controller
 {
@@ -45,9 +45,11 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        //$book = new Book();
-        //$book->create($request);
-        return "Created Successfuly";
+        $book = new Book();
+        $book->name = $request->input('name');
+        $book->description = $request->input('description');
+        $book->save();
+        return redirect('/book');
     }
 
     /**

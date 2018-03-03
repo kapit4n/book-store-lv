@@ -14,14 +14,15 @@
                         </div>
                     @endif
 
-                    <form action="store" method="POST">
+                    <form action="{{ route('book.store') }}" method="POST">
+                        {{ csrf_field() }}
                        <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control" id="name" name="name">
                       </div>
                       <div class="form-group">
                         <label for="description">Description:</label>
-                        <input type="text" class="form-control" id="description">
+                        <input type="text" class="form-control" id="description" name="description">
                       </div>
                       <button type="submit" class="btn btn-default">Save</button>
                     </form>
