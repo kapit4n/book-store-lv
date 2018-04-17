@@ -74,7 +74,8 @@ class BookController extends Controller
      */
     public function edit($id)
     {
-        return "Edit page";
+        $book = \App\Book::find($id);
+        return view('book.edit')->with('book', $book);
     }
 
     /**
@@ -86,7 +87,11 @@ class BookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $book = \App\Book::find($id);
+        $book->name = "Some Value";
+        $book->description = "Some Value";
+        $book->save();
+        return redirect('/book');
     }
 
     /**

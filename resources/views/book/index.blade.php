@@ -20,6 +20,7 @@
 						    <h5 class="card-title">{{ $book->name }}</h5>
 						    <p class="card-text">{{ $book->description }},...</p>
                             <a class="nav-link" href="{{ route('book.show', ['book' => $book->id]) }}" style="display: inline-block;"><span class="glyphicon glyphicon-eye-open" aria-hidden="true">Show</span></a>
+                            <a class="nav-link" href="{{ route('book.edit', ['book' => $book->id]) }}" style="display: inline-block;"><span class="glyphicon glyphicon-eye-pencil" aria-hidden="true">Edit</span></a>
                             <form action="{{action('BookController@destroy', $book['id'])}}" method="post">
                                 @csrf
                                 <input name="_method" type="hidden" value="DELETE">
