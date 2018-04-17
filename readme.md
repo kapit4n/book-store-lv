@@ -10,6 +10,8 @@
 ## Install
 * php artisan migrate
 * php artisan serve
+* open localhost:8000
+* login employee@example.com password secret
 
 ## Requeriments
 * php 7.2

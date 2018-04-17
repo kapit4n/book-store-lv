@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header"><a class="nav-link" href="{{ route('book.create') }}">Add</a></div>
 
-                <div class="card-body">
+                <div class="card-body">2
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
