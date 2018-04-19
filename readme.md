@@ -13,6 +13,11 @@
 * open localhost:8000
 * login employee@example.com password secret
 
+## Dev tips
+* php artisan migrate:refresh
+* // Refresh the database and run all database seeds...
+* php artisan migrate:refresh --seed
+
 ## Requeriments
 * php 7.2
 * mysql

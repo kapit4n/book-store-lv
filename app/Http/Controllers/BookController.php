@@ -50,6 +50,7 @@ class BookController extends Controller
         $book = new Book();
         $book->name = $request->input('name');
         $book->description = $request->input('description');
+        $book->url = $request->input('url');
         $book->save();
         return redirect('/book');
     }

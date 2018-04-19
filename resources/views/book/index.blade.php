@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header"><a class="nav-link" href="{{ route('book.create') }}">Add</a></div>
 
-                <div class="card-body">2
+                <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
@@ -15,7 +15,7 @@
                     @endif
                     @foreach ($books as $book)
 	                    <div class="card" style="width: 14rem; display: inline-block;">
-						  <img class="card-img-top" src="https://www.connect.ecuad.ca/sites/www.connect.ecuad.ca/files/imagecache/work_main_preview/users/794/work/282951/evolve_cover.jpg" alt="Card image cap">
+						  <img class="card-img-top" src="{{ $book['url']}}" alt="Card image cap">
 						  <div class="card-body">
 						    <h5 class="card-title">{{ $book->name }}</h5>
 						    <p class="card-text">{{ $book->description }},...</p>
