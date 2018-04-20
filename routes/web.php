@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/book', 'BookController');
+Route::resource('/user', 'UserController');
+Route::resource('/role', 'RoleController');

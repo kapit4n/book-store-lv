@@ -34,6 +34,8 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                           <li><a class="nav-link" href="{{ route('book.index') }}">Books</a></li>
+                          <li><a class="nav-link" href="{{ route('user.index') }}">Users</a></li>
+                          <li><a class="nav-link" href="{{ route('role.index') }}">Roles</a></li>
                         @guest
                             <li><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                             <li><a class="nav-link" href="{{ route('register') }}">Register</a></li>
