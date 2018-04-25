@@ -17,9 +17,9 @@
 					  <img class="card-img-top" src="{{ $user['url']}}" alt="Card image cap">
 					  <div class="card-body">
 					    <h5 class="card-title">{{ $user->name }}</h5>
-					    <p class="card-text">{{ $user->description }} </p>
-					    <a class="nav-link" href="{{ route('user.edit', ['user' => $user->id]) }}" style="display: inline-block;" style="display: inline:"><span class="glyphicon glyphicon-remove" aria-hidden="true">Edit</span></a>
-                        <form action="{{action('userController@destroy', $user['id'])}}" method="post">
+					    <p class="card-text">{{ $user->email }} </p>
+					    <a class="nav-link" href="{{ route('user.edit', ['user' => $user->id]) }}" style="display: inline-block;"><span class="glyphicon glyphicon-remove" aria-hidden="true">Edit</span></a>
+                        <form action="{{action('UserController@destroy', $user['id'])}}" method="post" style="display: inline-block;">
                             @csrf
                             <input name="_method" type="hidden" value="DELETE">
                             <button class="btn btn-sm btn-danger" type="submit"><span class="glyphicon glyphicon-remove" aria-hidden="true">X</span></button>

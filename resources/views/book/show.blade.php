@@ -18,8 +18,8 @@
 					  <div class="card-body">
 					    <h5 class="card-title">{{ $book->name }}</h5>
 					    <p class="card-text">{{ $book->description }} </p>
-					    <a class="nav-link" href="{{ route('book.edit', ['book' => $book->id]) }}" style="display: inline-block;" style="display: inline:"><span class="glyphicon glyphicon-remove" aria-hidden="true">Edit</span></a>
-                        <form action="{{action('BookController@destroy', $book['id'])}}" method="post">
+					    <a class="nav-link" href="{{ route('book.edit', ['book' => $book->id]) }}" style="display: inline-block;"><span class="glyphicon glyphicon-remove" aria-hidden="true">Edit</span></a>
+                        <form action="{{action('BookController@destroy', $book['id'])}}" method="post" style="display: inline-block;">
                             @csrf
                             <input name="_method" type="hidden" value="DELETE">
                             <button class="btn btn-sm btn-danger" type="submit"><span class="glyphicon glyphicon-remove" aria-hidden="true">X</span></button>
