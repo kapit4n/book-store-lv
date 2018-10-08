@@ -26,7 +26,7 @@
                       </div>
                       <div class="form-group">
                         <label for="description">Description:</label>
-                        <input type="text" class="form-control" id="description" name="description">
+                        <textarea class="form-control" id="description" name="description"></textarea>
                       </div>
                       <button type="submit" class="btn btn-default">Save</button>
                     </form>
